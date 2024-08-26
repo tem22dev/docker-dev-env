@@ -1,5 +1,5 @@
 # Clone src code:
-- git clone https://github.com/danhdat71/Laravel-NextJS.git
+- git clone https://github.com/tem22dev/docker-dev-env.git
 
 # Build docker
 - docker-compose build --no-cache
