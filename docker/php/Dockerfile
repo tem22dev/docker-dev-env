@@ -18,6 +18,9 @@ RUN docker-php-ext-install opcache
 RUN docker-php-ext-install exif
 RUN docker-php-ext-enable zip
 
-# COPY ./boot.sh /usr/local/sbin/
-# RUN chmod 755 /usr/local/sbin/boot.sh
-# CMD ["sh", "-c", "/usr/local/sbin/boot.sh && php-fpm"]
+RUN pecl install xdebug \
+  && docker-php-ext-enable xdebug
+
+COPY ./boot.sh /usr/local/sbin/
+RUN chmod 755 /usr/local/sbin/boot.sh
+CMD ["sh", "-c", "/usr/local/sbin/boot.sh && php-fpm"]
