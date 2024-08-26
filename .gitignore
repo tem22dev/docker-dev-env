@@ -1,0 +1,4 @@
+src/server/vendor
+src/server/composer.lock
+src/front/node_modules
+src/front/package-lock.json
